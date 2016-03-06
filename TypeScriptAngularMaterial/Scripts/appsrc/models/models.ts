@@ -1,36 +1,43 @@
 /// <reference path="../_all.ts" />
 
 module TSAMApp {
-  export class CreateUser {
-    constructor(
-      public firstName: string,
-      public lastName: string, 
-      public avatar: string, 
-      public bio: string)  {      
+    export class CreateUser {
+        constructor(
+            public firstName: string,
+            public lastName: string,
+            public avatar: string,
+            public bio: string) {
+        }
     }
-  }
-  
-  export class User {
-    constructor(
-      public name: string, 
-      public avatar: string, 
-      public bio: string, 
-      public notes: Note[])  {      
+
+    export class User {
+        constructor(
+            public name: string,
+            public avatar: string,
+            public bio: string,
+            public notes: Note[]) {
+        }
+
+        static fromCreate(user: CreateUser): User {
+            return new User(
+                user.firstName + ' ' + user.lastName,
+                user.avatar,
+                user.bio,
+                []);
+        }
     }
-    
-    static fromCreate(user: CreateUser): User {
-      return new User(
-        user.firstName + ' ' + user.lastName,
-        user.avatar,
-        user.bio,
-        []);
+
+    export class Note {
+        constructor(
+            public title: string,
+            public date: Date) {
+        }
     }
-  }   
-  
-  export class Note {
-    constructor(
-      public title: string, 
-      public date: Date) {      
+
+    export class Il {
+        constructor(
+            public id: number,
+            public name: string) { 
+        }
     }
-  }  
-}
+} 

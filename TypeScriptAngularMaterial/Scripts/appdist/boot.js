@@ -1,10 +1,10 @@
 /// <reference path="_all.ts" />
 var TSAMApp;
 (function (TSAMApp) {
-    angular.module('typeScriptApp', ['ngMaterial'])
+    angular.module('typeScriptApp', ['Globals', 'ngMaterial', 'ngResource'])
         .service(TSAMApp.Services)
         .controller(TSAMApp.Controllers)
-        .config(function ($mdIconProvider, $mdThemingProvider) {
+        .config(function ($logProvider, $mdIconProvider, $mdThemingProvider) {
         $mdIconProvider
             .defaultIconSet('/content/svg/avatars.svg', 128)
             .icon("google_plus", "/content/svg/google_plus.svg", 512)
@@ -15,6 +15,9 @@ var TSAMApp;
         $mdThemingProvider.theme('default')
             .primaryPalette('blue')
             .accentPalette('red');
+        if ($logProvider.debugEnabled) {
+            $logProvider.debugEnabled(true);
+        }
     })
         .run(['$rootScope', '$mdSidenav', function ($rootScope, $mdSidenav) {
             $rootScope.toggleSideNav = function () {

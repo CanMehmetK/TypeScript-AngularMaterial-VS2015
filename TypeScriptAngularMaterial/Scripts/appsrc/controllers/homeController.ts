@@ -2,9 +2,13 @@
 
     export class HomeController {
 
-        static $inject = [];
+        static $inject = ['ILService'];
         message: string = "Selam";
-        constructor() {
+        constructor(private ILService: TSAMApp.Services.ILService) {
+            var controller = this;
+            ILService.getValues().then((data: any) => {
+                console.log(data);
+            });
         }
     }
 } 

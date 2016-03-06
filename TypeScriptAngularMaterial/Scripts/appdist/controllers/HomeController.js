@@ -3,10 +3,15 @@ var TSAMApp;
     var Controllers;
     (function (Controllers) {
         var HomeController = (function () {
-            function HomeController() {
+            function HomeController(ILService) {
+                this.ILService = ILService;
                 this.message = "Selam";
+                var controller = this;
+                ILService.getValues().then(function (data) {
+                    console.log(data);
+                });
             }
-            HomeController.$inject = [];
+            HomeController.$inject = ['ILService'];
             return HomeController;
         })();
         Controllers.HomeController = HomeController;

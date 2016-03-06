@@ -1,10 +1,12 @@
 ﻿/// <reference path="_all.ts" />
 
 module TSAMApp {
-    angular.module('typeScriptApp', ['ngMaterial'])
+    angular.module('typeScriptApp', ['Globals','ngMaterial','ngResource'])
         .service(TSAMApp.Services)
         .controller(TSAMApp.Controllers)
-        .config(($mdIconProvider: angular.material.IIconProvider,
+        .config((
+            $logProvider: angular.ILogProvider,
+            $mdIconProvider: angular.material.IIconProvider,
             $mdThemingProvider: angular.material.IThemingProvider) => {
             $mdIconProvider
                 .defaultIconSet('/content/svg/avatars.svg', 128)
@@ -17,6 +19,10 @@ module TSAMApp {
             $mdThemingProvider.theme('default')
                 .primaryPalette('blue')
                 .accentPalette('red');
+
+            if ($logProvider.debugEnabled) {
+                $logProvider.debugEnabled(true);
+            }
         })
         .run(['$rootScope', '$mdSidenav', function ($rootScope, $mdSidenav) {
             $rootScope.toggleSideNav = function () {
@@ -24,8 +30,6 @@ module TSAMApp {
                 $mdSidenav('left').toggle();
             };
         }]);
-
-
 }
 
   

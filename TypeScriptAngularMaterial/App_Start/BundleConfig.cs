@@ -17,6 +17,7 @@ namespace TSAM
                 "~/Scripts/bower_components/angular/angular.min.js",
                 "~/Scripts/bower_components/angular-animate/angular-animate.min.js",
                 "~/Scripts/bower_components/angular-aria/angular-aria.min.js",
+                "~/Scripts/bower_components/angular-resource/angular-resource.min.js",
                 "~/Scripts/bower_components/angular-material/angular-material.min.js"
                 ));
 
@@ -25,6 +26,9 @@ namespace TSAM
 
             bundles.Add(new ScriptBundle("~/bundles/controllers")
                 .IncludeDirectory("~/Scripts/appdist/controllers", "*.js", true));
+
+            bundles.Add(new ScriptBundle("~/bundles/directives")
+                .IncludeDirectory("~/Scripts/appdist/directives", "*.js", true));
 
             bundles.Add(new ScriptBundle("~/bundles/app").Include(
                 "~/Scripts/appdist/boot.js"
