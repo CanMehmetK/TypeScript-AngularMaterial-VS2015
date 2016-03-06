@@ -8,12 +8,6 @@ var TSAMApp;
                 this.ILService = ILService;
                 this.count = 15;
                 this.count1 = 15;
-                this.sonuc = "boş";
-                this.message = "Selam";
-                this.filter = "";
-                this.query = {};
-                this.types = ["Test", "Demo", "Numeric", "ABC"];
-                this.items = [{ typ: "Test" }, { typ: "Test" }, { typ: "Demo" }, { typ: "Numeric" }];
                 var controller = this;
                 ILService.getValues().then(function (result) {
                     console.log(result.data);

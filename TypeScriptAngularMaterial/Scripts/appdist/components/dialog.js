@@ -3,7 +3,7 @@ var TSAMApp;
 (function (TSAMApp) {
     var Components;
     (function (Components) {
-        function counter() {
+        function DialogComponent() {
             return {
                 bindings: {
                     count: '=',
@@ -26,9 +26,9 @@ var TSAMApp;
                                     $mdDialog.cancel();
                                 };
                                 $scope.answer = function (answer) {
-                                    console.log("-->" + answer + "---<<<<<");
-                                    console.log($ctrl);
-                                    $ctrl.count1 = answer;
+                                    $ctrl.count1 = $ctrl.count;
+                                    $ctrl.count = answer;
+                                    console.log(answer + "---<<<<<");
                                     $mdDialog.hide(answer);
                                 };
                             },
@@ -45,8 +45,8 @@ var TSAMApp;
                                 '<md-dialog-actions layout="row">                                                           ' +
                                 //   '<md-button href="http://en.wikipedia.org/wiki/Mango" target="_blank" md-autofocus>Wikipedia </md-button>' +
                                 '<span flex></span>                                                                         ' +
-                                '<md-button ng-click="answer(1);">Not Useful</md-button>                  ' +
-                                '<md-button ng-click="answer(2)" style="margin-right:20px;">Useful</md-button> ' +
+                                '<md-button ng-click="answer(100);">100</md-button>                  ' +
+                                '<md-button ng-click="answer(200)" style="margin-right:20px;">200</md-button> ' +
                                 '</md-dialog-actions>                                                                       ' +
                                 '</form>                                                                                    ' +
                                 '</md-dialog>                                                                               ',
@@ -71,8 +71,8 @@ var TSAMApp;
                 }
             };
         }
-        Components.counter = counter;
-        angular.module('typeScriptApp').component('counter', counter());
+        Components.DialogComponent = DialogComponent;
+        angular.module('typeScriptApp').component('dialogComponent', DialogComponent());
     })(Components = TSAMApp.Components || (TSAMApp.Components = {}));
 })(TSAMApp || (TSAMApp = {}));
-//# sourceMappingURL=components.js.map
+//# sourceMappingURL=dialog.js.map
