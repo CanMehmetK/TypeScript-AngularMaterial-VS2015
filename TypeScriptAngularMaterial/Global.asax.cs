@@ -4,7 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using System.Web.Routing;
-
+using System.Web.Optimization;
 namespace  TSAM
 {
     public class MvcApplication : System.Web.HttpApplication
@@ -12,7 +12,15 @@ namespace  TSAM
         protected void Application_Start()
         {
             AreaRegistration.RegisterAllAreas();
+            //Filters
+            
+            //Routes
             RouteConfig.RegisterRoutes(RouteTable.Routes);
+            //Bundles
+            BundleConfig.RegisterBundles(BundleTable.Bundles);
+            //HttpConfigurations
+
+            //Mappings
         }
     }
 }

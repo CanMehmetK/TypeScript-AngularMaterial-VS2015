@@ -1,1 +1,1 @@
-{"version":3,"file":"boot.js","sourceRoot":"","sources":["../appsrc/boot.ts"],"names":[],"mappings":"AAAA,gCAAgC"}
+{"version":3,"file":"boot.js","sourceRoot":"","sources":["../appsrc/boot.ts"],"names":["TSAMApp"],"mappings":"AAAA,gCAAgC;AAEhC,IAAO,OAAO,CAIb;AAJD,WAAO,OAAO,EAAC,CAAC;IACZA,OAAOA,CAACA,MAAMA,CAACA,eAAeA,EAAEA,CAACA,YAAYA,CAACA,CAACA;SAC1CA,UAAUA,CAACA,OAAOA,CAACA,WAAWA,CAACA,CAACA;AAEzCA,CAACA,EAJM,OAAO,KAAP,OAAO,QAIb"}
