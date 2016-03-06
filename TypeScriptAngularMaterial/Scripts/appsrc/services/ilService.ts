@@ -7,10 +7,10 @@ module TSAMApp.Services {
         static $inject = ['$q', '$http'];
         constructor(
             private $q: ng.IQService,
-            private $http: ng.IHttpService,
+            private $http: ng.IHttpService, 
             WEBAPIURL) {
             var service = this;
-            service.url = 'http://localhost:39001' + service.url;
+            service.url =  'http://localhost:39001' + service.url;
 
         }
         public getValues = () => this.$http.get<any>(this.url);

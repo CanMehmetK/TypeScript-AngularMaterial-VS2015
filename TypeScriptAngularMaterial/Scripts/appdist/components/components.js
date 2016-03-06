@@ -62,13 +62,11 @@ var TSAMApp;
                 },
                 template: function ($element, $attrs) {
                     return [
-                        '<div class="todo">',
                         '<input type="text" ng-model="$ctrl.count">',
                         '<md-button class="md-primary md-raised" ng-click="$ctrl.decrement();" flex="100"  flex-gt-md="auto">-</md-button>',
                         '<md-button class="md-primary md-raised" ng-click="$ctrl.increment();" flex="100"  flex-gt-md="auto">+</md-button>',
                         '<md-button class="md-primary md-raised" ng-click="$ctrl.showAlert($event,$ctrl);" flex="100"  flex-gt-md="auto">Alert Dialog</md-button>',
-                        '<span ng-model="$ctrl.count1"><span>',
-                        '</div>'
+                        '<span ng-model="$ctrl.count1"><span>'
                     ].join('');
                 }
             };
