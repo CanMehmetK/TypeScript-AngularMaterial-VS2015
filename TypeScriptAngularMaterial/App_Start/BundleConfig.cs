@@ -20,6 +20,9 @@ namespace TSAM
                 "~/Scripts/bower_components/angular-material/angular-material.min.js"
                 ));
 
+            bundles.Add(new ScriptBundle("~/bundles/services")
+                .IncludeDirectory("~/Scripts/appdist/services", "*.js", true));
+
             bundles.Add(new ScriptBundle("~/bundles/controllers")
                 .IncludeDirectory("~/Scripts/appdist/controllers", "*.js", true));
 

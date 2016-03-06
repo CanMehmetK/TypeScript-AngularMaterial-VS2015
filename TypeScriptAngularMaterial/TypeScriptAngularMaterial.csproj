@@ -110,6 +110,12 @@
   <ItemGroup>
     <None Include=".bowerrc" />
     <Content Include="content\css\app.css" />
+    <Content Include="content\svg\avatars.svg" />
+    <Content Include="content\svg\google_plus.svg" />
+    <Content Include="content\svg\hangouts.svg" />
+    <Content Include="content\svg\menu.svg" />
+    <Content Include="content\svg\phone.svg" />
+    <Content Include="content\svg\twitter.svg" />
     <Content Include="Global.asax" />
     <Content Include="Scripts\appdist\boot.js" />
     <Content Include="Scripts\appdist\controllers\homeController.js" />
@@ -613,6 +619,7 @@
   <ItemGroup>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\BaseController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -716,6 +723,8 @@
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Scripts\appdist\controllers\homeController.js.map" />
+    <Content Include="Views\Shared\MainMenu.cshtml" />
+    <Content Include="Views\Shared\ToolBar.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -725,11 +734,12 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Scripts\appsrc\models\" />
   </ItemGroup>
   <ItemGroup>
     <TypeScriptCompile Include="Scripts\appsrc\boot.ts" />
     <TypeScriptCompile Include="Scripts\appsrc\controllers\HomeController.ts" />
+    <TypeScriptCompile Include="Scripts\appsrc\models\models.ts" />
+    <TypeScriptCompile Include="Scripts\appsrc\services\userService.ts" />
     <TypeScriptCompile Include="Scripts\typings\tsd.d.ts" />
     <TypeScriptCompile Include="Scripts\appsrc\_all.ts" />
     <TypeScriptCompile Include="Scripts\typings\angular-material\angular-material.d.ts" />
