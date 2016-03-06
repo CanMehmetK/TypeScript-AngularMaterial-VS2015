@@ -4,6 +4,7 @@ var TSAMApp;
     angular.module('typeScriptApp', ['Globals', 'ngMaterial', 'ngResource'])
         .service(TSAMApp.Services)
         .controller(TSAMApp.Controllers)
+        .directive(TSAMApp.Directives)
         .config(function ($logProvider, $mdIconProvider, $mdThemingProvider) {
         $mdIconProvider
             .defaultIconSet('/content/svg/avatars.svg', 128)

@@ -1,9 +1,10 @@
 ﻿/// <reference path="_all.ts" />
 
 module TSAMApp {
-    angular.module('typeScriptApp', ['Globals','ngMaterial','ngResource'])
+    angular.module('typeScriptApp', ['Globals', 'ngMaterial', 'ngResource'])
         .service(TSAMApp.Services)
         .controller(TSAMApp.Controllers)
+        .directive(TSAMApp.Directives)  
         .config((
             $logProvider: angular.ILogProvider,
             $mdIconProvider: angular.material.IIconProvider,
@@ -29,6 +30,7 @@ module TSAMApp {
                 console.log('toggleSideNav');
                 $mdSidenav('left').toggle();
             };
+
         }]);
 }
 

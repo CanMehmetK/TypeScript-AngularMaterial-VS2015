@@ -10,6 +10,11 @@ namespace TSAM
     {
         public static void RegisterBundles(BundleCollection bundles)
         {
+            bundles.Clear();
+            bundles.ResetAll();
+
+            BundleTable.EnableOptimizations = false;
+
             bundles.Add(new ScriptBundle("~/bundles/jquery").Include(
                         "~/Scripts/jquery-2.2.1.min.js"));
 
@@ -29,6 +34,9 @@ namespace TSAM
 
             bundles.Add(new ScriptBundle("~/bundles/directives")
                 .IncludeDirectory("~/Scripts/appdist/directives", "*.js", true));
+
+            bundles.Add(new ScriptBundle("~/bundles/components")
+               .IncludeDirectory("~/Scripts/appdist/components", "*.js", true));
 
             bundles.Add(new ScriptBundle("~/bundles/app").Include(
                 "~/Scripts/appdist/boot.js"
