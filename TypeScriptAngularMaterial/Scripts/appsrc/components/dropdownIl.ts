@@ -8,9 +8,9 @@ module TSAMApp.Components {
                 ngModel: '=',
                 list: '@',
                 ngCascade: '@',
-            },
+            }, 
             controller: function (ILService: TSAMApp.Services.ILService) {
-                isCascaded: false,                
+                
                 ILService.getValues().then(
                     (result: any) => {
                         this.list = result.data;

@@ -1,7 +1,7 @@
 /// <reference path="_all.ts" />
 var TSAMApp;
 (function (TSAMApp) {
-    angular.module('typeScriptApp', ['Globals', 'ngMaterial', 'ngResource'])
+    angular.module('typeScriptApp', ['ngMaterial', 'ngResource'])
         .service(TSAMApp.Services)
         .controller(TSAMApp.Controllers)
         .directive(TSAMApp.Directives)

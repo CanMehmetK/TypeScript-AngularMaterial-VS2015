@@ -1,0 +1,17 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div ng-controller="HomeController as vm">
+    <p>--------------</p>
+    
+    <dialog-component count="vm.count" count1="vm.count1"></dialog-component>
+    {{vm.count}}
+    {{vm.count1}}
+
+    <p>--------------</p>
+    <il-select-component ngModel="il"></il-select-component>
+    {{vm.il}}
+</div>

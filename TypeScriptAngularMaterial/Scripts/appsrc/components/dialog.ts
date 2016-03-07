@@ -1,7 +1,7 @@
 ﻿/// <reference path="../_all.ts" />
 module TSAMApp.Components {
     export function DialogComponent() {
-        return {
+        return { 
             bindings: {
                 count: '=',
                 count1: '='

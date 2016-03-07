@@ -8,7 +8,7 @@ var TSAMApp;
             this.isComplete = isComplete;
         }
         return ListItem;
-    })();
+    }());
     TSAMApp.ListItem = ListItem;
 })(TSAMApp || (TSAMApp = {}));
 var TSAMApp;
@@ -29,7 +29,7 @@ var TSAMApp;
             }
             bolController.$inject = ['ILService'];
             return bolController;
-        })();
+        }());
         Controllers.bolController = bolController;
         angular.module('typeScriptApp').directive('bolController', [function () { return new TSAMApp.Controllers.bolController(TSAMApp.Services.ILService); }]);
         var ToDoListController = (function () {
@@ -52,7 +52,7 @@ var TSAMApp;
                 "$scope"
             ];
             return ToDoListController;
-        })();
+        }());
         Controllers.ToDoListController = ToDoListController;
     })(Controllers = TSAMApp.Controllers || (TSAMApp.Controllers = {}));
 })(TSAMApp || (TSAMApp = {}));
@@ -121,7 +121,7 @@ var TSAMApp;
                 };
             }
             return colFilterable;
-        })();
+        }());
         Directives.colFilterable = colFilterable;
         angular.module('typeScriptApp').directive('colFilterable', [function () { return new TSAMApp.Directives.colFilterable(); }]);
         var bolSelect = (function () {
@@ -159,7 +159,7 @@ var TSAMApp;
                 };
             }
             return bolSelect;
-        })();
+        }());
         Directives.bolSelect = bolSelect;
         angular.module('typeScriptApp').directive('bolSelect', [function () { return new TSAMApp.Directives.bolSelect(); }]);
     })(Directives = TSAMApp.Directives || (TSAMApp.Directives = {}));

@@ -42,7 +42,7 @@ var TSAMApp;
             };
             UserService.$inject = ['$q'];
             return UserService;
-        })();
+        }());
         Services.UserService = UserService;
     })(Services = TSAMApp.Services || (TSAMApp.Services = {}));
 })(TSAMApp || (TSAMApp = {}));

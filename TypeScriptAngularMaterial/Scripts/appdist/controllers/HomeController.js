@@ -16,7 +16,7 @@ var TSAMApp;
             }
             HomeController.$inject = ['ILService'];
             return HomeController;
-        })();
+        }());
         Controllers.HomeController = HomeController;
     })(Controllers = TSAMApp.Controllers || (TSAMApp.Controllers = {}));
 })(TSAMApp || (TSAMApp = {}));

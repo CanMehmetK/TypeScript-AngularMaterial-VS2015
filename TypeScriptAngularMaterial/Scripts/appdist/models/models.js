@@ -9,7 +9,7 @@ var TSAMApp;
             this.bio = bio;
         }
         return CreateUser;
-    })();
+    }());
     TSAMApp.CreateUser = CreateUser;
     var User = (function () {
         function User(name, avatar, bio, notes) {
@@ -22,7 +22,7 @@ var TSAMApp;
             return new User(user.firstName + ' ' + user.lastName, user.avatar, user.bio, []);
         };
         return User;
-    })();
+    }());
     TSAMApp.User = User;
     var Note = (function () {
         function Note(title, date) {
@@ -30,7 +30,7 @@ var TSAMApp;
             this.date = date;
         }
         return Note;
-    })();
+    }());
     TSAMApp.Note = Note;
     var Il = (function () {
         function Il(id, name) {
@@ -38,7 +38,7 @@ var TSAMApp;
             this.name = name;
         }
         return Il;
-    })();
+    }());
     TSAMApp.Il = Il;
 })(TSAMApp || (TSAMApp = {}));
 //# sourceMappingURL=models.js.map
